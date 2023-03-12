@@ -5,6 +5,8 @@
     margin: 0px;
     padding: 0px;
 }
+/* Mobile first */
+/* la pantalla se ve en dimensión responsive 360px, dentro de la herramienta Inspeccionar */
 
 .patients {
 background-color: rgba(132, 229, 201, 0.082);
