@@ -95,7 +95,7 @@ width: 360px;
     margin-bottom: 20px;
 }
 
-
+/* Acomodar los input que no van en column */
 /* BREAKPOINTS */
 /* Desktop */
 @media (min-width: 769px) {}
