@@ -12,65 +12,81 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="add-patients">
-        Pacientes
+    <header class="patients">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+           <h2>Pacientes</h2>
+           <div class="icons-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                    <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                </svg>
+            </div>
     </header>
     <main>
-        <section class="patients">
-            <h2 class="h2">Ingresar nuevo paciente</h2>
+        <section class="add-patients">
+            <h2>Ingresar nuevo paciente</h2>
             <form action="/" method="POST">
                 <h3>Datos personales</h3>
-                <input type="text" name="surname" placeholder="Apellido">
-                <input type="text" name="name" placeholder="Nombres">
-                <input type="date" name="birthdate" placeholder="">
-                <select name="dni" id="dni">
-                    <option value="DNI">DNI</option>
-                    <option value="P.N">P.N</option>
-                    <option value="P.E">P.E</option>
-                </select>
-                <input type="number" name="birth" placeholder="N° de documento">
-                <select name="gender" id="gender">
-                    <option value="-">-</option>
-                    <option value="F">F</option>
-                    <option value="M">M</option>
-                </select>
-                <input type="text" name="nationality" placeholder="Nacionalidad">
-                <input type="number" name="phone" placeholder="Tel. de contacto">
-                <input type="email" name="email" placeholder="Correo electrónico">
-
+                <div class="personal">
+                    <input type="text" name="surname" placeholder="Apellido">
+                    <input type="text" name="name" placeholder="Nombres">
+                    <input type="date" name="birthdate" placeholder="">
+                    <input type="age" name="age" placeholder="Edad">
+                    <select name="dni" id="dni">
+                        <option value="DNI">DNI</option>
+                        <option value="P.N">P.N</option>
+                        <option value="P.E">P.E</option>
+                    </select>
+                    <input type="number" name="birth" placeholder="N° de documento">
+                    <select name="gender" id="gender">
+                        <option value="-">-</option>
+                        <option value="F">F</option>
+                        <option value="M">M</option>
+                    </select>
+                    <input type="text" name="nationality" placeholder="Nacionalidad">
+                    <input type="number" name="phone" placeholder="Tel. de contacto">
+                    <input type="email" name="email" placeholder="Correo electrónico">
+                </div>
                 <h3>Obra social</h3>
-                <select name="os" id="os">
-                    <option value="APROSS">APROSS</option>
-                    <option value="OMINT">OMINT</option>
-                    <option value="OSDE">OSDE</option>
-                </select>
-                <select name="plan" id="plan">
-                    <option value="Plan 2500">Plan 2500</option>
-                    <option value="Plan 3500">Plan 3500</option>
-                    <option value="Plan 4500">Plan 4500</option>
-                </select>
-                <input type="number" name="socio" placeholder="N° de afiliado">
-                <input type="text" name="obs" placeholder="Observaciones">
-
+                <div class="ob-social">
+                    <select name="os" id="os">
+                        <option value="APROSS">APROSS</option>
+                        <option value="OMINT">OMINT</option>
+                        <option value="OSDE">OSDE</option>
+                    </select>
+                    <select name="plan" id="plan">
+                        <option value="Plan 2500">Plan 2500</option>
+                        <option value="Plan 3500">Plan 3500</option>
+                        <option value="Plan 4500">Plan 4500</option>
+                    </select>
+                    <input type="number" name="socio" placeholder="N° de afiliado">
+                    <input type="text" name="obs" placeholder="Observaciones">
+                </div>
                 <h3>Domicilio</h3>
-                <input type="text" name="address" placeholder="Calle">
-                <input type="number" name="number-address" placeholder="Núm.">
-                <input type="number" name="floor" placeholder="Piso">
-                <input type="text" name="dpt" placeholder="Dpto.">
-                <input type="number" name="cp" placeholder="C.P">
-                <input type="text" name="neighb" placeholder="Barrio">
-                <select name="country" id="country">
-                    <option value="Argentina">Argentina</option>
-                    <option value="Chile">Chile</option>
-                    <option value="Uruguay">Uruguay</option>
-                </select>
-                <select name="prov" id="prov">
-                    <option value="Buenos Aires">Buenos Aires</option>
-                    <option value="Córdoba">Córdoba</option>
-                    <option value="Santa Fe">Santa Fe</option>
-                </select>
-
-                <button type="submit">Guardar</button>
+                <div class="address">
+                    <input type="text" name="address" placeholder="Calle">
+                    <input type="number" name="number-address" placeholder="Núm.">
+                    <input type="number" name="floor" placeholder="Piso">
+                    <input type="text" name="dpt" placeholder="Dpto.">
+                    <input type="number" name="cp" placeholder="C.P">
+                    <input type="text" name="neighb" placeholder="Barrio">
+                    <select name="country" id="country">
+                        <option value="Argentina">Argentina</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Uruguay">Uruguay</option>
+                    </select>
+                    <select name="prov" id="prov">
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Santa Fe">Santa Fe</option>
+                    </select>
+                </div>
+                <button type="submit" class="save">Guardar</button>
             </form>
         </section>
     </main>
