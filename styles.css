@@ -1,0 +1,47 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+    background-color: aquamarine;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 360px;
+height: 64px;
+left: 0px;
+top: 52px;
+}
+
+.patients {
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 340px;
+height: 603px;
+left: 10px;
+top: 112px;
+overflow-y: scroll;
+
+}
+.h2 {
+position: absolute;
+left: 0%;
+right: 27.81%;
+top: 0%;
+bottom: 98.2%;
+}
+
+
+/* BREAKPOINTS */
+/* Desktop */
+@media (min-width: 769px) {}
