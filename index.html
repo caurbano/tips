@@ -4,15 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Italpark Hearth - Gestión</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- ionicons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="header">Pacientes</div>
+    <header class="add-patients">
+        Pacientes
+    </header>
+    <main>
         <section class="patients">
             <h2 class="h2">Ingresar nuevo paciente</h2>
-            <h3>Datos personales</h3>
+            <form action="/" method="POST">
+                <h3>Datos personales</h3>
+                <input type="text" name="surname" placeholder="Apellido">
+                <input type="text" name="name" placeholder="Nombres">
+                <input type="date" name="birthdate" placeholder="">
+                <select name="dni" id="dni">
+                    <option value="DNI">DNI</option>
+                    <option value="P.N">P.N</option>
+                    <option value="P.E">P.E</option>
+                </select>
+                <input type="number" name="birth" placeholder="N° de documento">
+                <select name="gender" id="gender">
+                    <option value="-">-</option>
+                    <option value="F">F</option>
+                    <option value="M">M</option>
+                </select>
+                <input type="text" name="nationality" placeholder="Nacionalidad">
+                <input type="number" name="phone" placeholder="Tel. de contacto">
+                <input type="email" name="email" placeholder="Correo electrónico">
+
+                <h3>Obra social</h3>
+                <select name="os" id="os">
+                    <option value="APROSS">APROSS</option>
+                    <option value="OMINT">OMINT</option>
+                    <option value="OSDE">OSDE</option>
+                </select>
+                <select name="plan" id="plan">
+                    <option value="Plan 2500">Plan 2500</option>
+                    <option value="Plan 3500">Plan 3500</option>
+                    <option value="Plan 4500">Plan 4500</option>
+                </select>
+                <input type="number" name="socio" placeholder="N° de afiliado">
+                <input type="text" name="obs" placeholder="Observaciones">
+
+                <h3>Domicilio</h3>
+                <input type="text" name="address" placeholder="Calle">
+                <input type="number" name="number-address" placeholder="Núm.">
+                <input type="number" name="floor" placeholder="Piso">
+                <input type="text" name="dpt" placeholder="Dpto.">
+                <input type="number" name="cp" placeholder="C.P">
+                <input type="text" name="neighb" placeholder="Barrio">
+                <select name="country" id="country">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Uruguay">Uruguay</option>
+                </select>
+                <select name="prov" id="prov">
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                </select>
+
+                <button type="submit">Guardar</button>
+            </form>
         </section>
+    </main>
+    <footer>
+
+    </footer>
         
 </body>
 </html>
